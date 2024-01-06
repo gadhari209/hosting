@@ -6,6 +6,8 @@ const db = mysql.createConnection({
   password: process.env.DB_PASSWORD||'WWAUoCIyIAmZEuHb75EU',
   database: process.env.DB_DATABASE ||'bpihkezkqzqabr8yvjeq',
   port: process.env.DB_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 5
 });
 
 // For Render, use a different approach to handle the connection
